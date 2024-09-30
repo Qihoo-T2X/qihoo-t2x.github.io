@@ -67,18 +67,22 @@
                 <div class="column is-four-fifths">
                     <h2 class="title is-3">Abstract</h2>
                     <div class="content has-text-justified">
-                        <p>The global self-attention mechanism in diffusion transformers involves redundant computation 
-                            due to the sparse and redundant nature of visual information. And the attention map of tokens 
-                            within a spatial window shows significant similarity. To address this redundancy, we propose 
-                            the <strong>P</strong>roxy <strong>T</strong>oken <strong>D</strong>iffusion <strong>T</strong>ransformer (<strong>PT-DiT</strong>), 
+                        <p>
+                            The global self-attention mechanism in diffusion transformers involves redundant
+                            computation due to the sparse and redundant nature of visual information, and
+                            the attention map of tokens within a spatial window shows significant similarity.
+                            To address this redundancy, we propose the <strong>P</strong>roxy <strong>T</strong>oken <strong>D</strong>iffusion <strong>T</strong>ransformer (<strong>PT-DiT</strong>),
                             which employs sparse representative token attention (where the number of representative tokens is much smaller than the total number of tokens)
-                            to efficiently model global visual information. Specifically, in each transformer block, we randomly sample one token from each spatial-temporal
-                            window to serve as a proxy token for that region. The global semantics are captured through the self-attention of these proxy tokens and then 
-                            injected into all latent tokens via cross-attention. Simultaneously, we introduce window attention and shifted window attention to address the
-                            limitations in detail modeling caused by the sparse attention mechanism. Building on the well-designed PT-DiT, we further develop the Qihoo-T2X 
-                            family, which includes a variety of models for T2I, T2V and T2MV tasks. Experimental results show that PT-DiT achieves competitive performance
-                            while reducing the computational complexity in both image and video generation tasks (e.g., a 48% reduction compared to DiT and a 35% reduction
-                            compared to Pixart-<em>α</em>).
+                            to model global visual information efficiently. Specifically, within each transformer block, we compute an averaging token from each spatial-temporal window to serve as a proxy token for that region. The global semantics are cap-
+                            tured through the self-attention of these proxy tokens and then injected into all
+                            latent tokens via cross-attention. Simultaneously, we introduce window and shift
+                            window attention to address the limitations in detail modeling caused by the
+                            sparse attention mechanism. Building on the well-designed PT-DiT, we further
+                            develop the <strong>Qihoo-T2X</strong> family, which includes a variety of models for T2I, T2V,
+                            and T2MV tasks. Experimental results show that PT-DiT achieves competitive
+                            performance while reducing the computational complexity in both image and
+                            video generation tasks (e.g., a 48% reduction compared to DiT and a 35% re-
+                            duction compared to PixArt-<em>α</em>). 
                         </p>
                     </div>
                 </div>
@@ -163,14 +167,6 @@
                             </div>
                             <div class="card-content has-text-centered">A painting hanging on the wall depicts a mountain with a starry night sky above it. The mountain is the focal point, surrounded by beautifully painted scenery.</div>
                         </div>
-                        <div class="card">
-                            <div class="card-image">
-                                <img src="static/images/carousel/In the dark room.png" alt="In the dark room" />
-                            </div>
-                            <div class="card-content has-text-centered">In the dark room, a woman with long flowing hair emitting blue light stands in the center of the picture. She is wearing black and purple clothes and her hair is tied into a ponytail.</div>
-                        </div>
-
-
                     </div>
                 </div>
             </div>
@@ -199,7 +195,7 @@
                 <div class="columns is-centered has-text-centered">
                 <h2 class="title is-3">Comparison of Computational Complexity </h2></div>
                 <img src="static/images/efficiency.png" alt="efficiency" />
-                <p>PT-DiT effectively reduces the computational complexity in both image and video generation tasks. Moreover, even though Our-H is equipped with 3D attention, it is still less computationally complex than EasyAnimate with 1D attention.</p>
+                <p>PT-DiT effectively reduces the computational complexity in both image and video generation tasks. The GFLOPs of PT-DiT/H are significantly less than Lumina-Next across multiple scales. Specifically, at resolutions of 512 and 2048, PT-DiT/H achieves complexity reduction of 82.0% and 82.5% respectively. Since the T2V version of EasyAnimateV4 employs HunyuanDiT with 3D full attention, its memory consumption increases dramatically with the number of video frames. In contrast, PT-DiT, which also utilizes 3D spatial-temporal modeling, experiences only a slight increase in memory consumption due to its well-designed proxy token attention mechanism.</p>
                 
             </div>
             </div>
@@ -591,26 +587,151 @@
     <section class="hero is-small">
         <div class="hero-body">
             <div class="container is-max-desktop">
-                <div class="columns is-centered has-text-centered"><h2 class="title is-3"> More cases of Qihoo-T2V and Qihoo-T2MV are coming soon.</h2></div>
+                <div class="columns is-centered has-text-centered"><h2 class="title is-3"> More cases of the Qihoo-T2V.</h2></div>
                 
-                <!-- <div class="columns is-centered has-text-centered">
+                <div class="columns is-centered has-text-centered">
                     
                     <div class="column">
-                        <div id="video-sample1" class="modal">
-                            <div class="modal-background"></div>
-                            <div class="modal-content">
-                                <img loading="lazy" src="static/images/qihoo-t2v/coming.png" />
-                            </div>
-                            <button class="modal-close is-large" aria-label="close"></button>
-                        </div>
                         <div class="card">
-                            <div class="card-image js-modal-trigger" data-target="video-sample1">
-                                <img loading="lazy" src="static/images/qihoo-t2v/coming.png" alt="sample1">
+                            <div class="card-image">
+                                <!-- 保留视频元素，并确保它可以直接播放 -->
+                                <video loading="lazy" src="static/images/qihoo-t2v/16592077.mp4" controls autoplay loop muted alt="sample1">
+                                    <!-- 提供一个替代文本，用于不支持视频的浏览器 -->
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="card-content">The bustling city night scene, tall buildings, the camera shifts from the left side of the frame to right.</div>
                             </div>
-
                         </div>
                     </div>
-                </div> -->
+                    
+                    <div class="column">
+                        <div class="card">
+                            <div class="card-image">
+                                <!-- 保留视频元素，并确保它可以直接播放 -->
+                                <video loading="lazy" src="static/images/qihoo-t2v/1038477752.mp4" controls autoplay loop muted alt="sample1">
+                                    <!-- 提供一个替代文本，用于不支持视频的浏览器 -->
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="card-content">
+                                    Blonde woman with sunflowers, smiling in a sunflower field under blue sky.</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="column">
+                        <div class="card">
+                            <div class="card-image">
+                                <!-- 保留视频元素，并确保它可以直接播放 -->
+                                <video loading="lazy" src="static/images/qihoo-t2v/1101691579.mp4" controls autoplay loop muted alt="sample1">
+                                    <!-- 提供一个替代文本，用于不支持视频的浏览器 -->
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="card-content">Futuristic tunnel with pink-purple lights, conveying speed and movement.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="columns is-centered has-text-centered">
+                    
+                    <div class="column">
+                        <div class="card">
+                            <div class="card-image">
+                                <!-- 保留视频元素，并确保它可以直接播放 -->
+                                <video loading="lazy" src="static/images/qihoo-t2v/1041658969.mp4" controls autoplay loop muted alt="sample1">
+                                    <!-- 提供一个替代文本，用于不支持视频的浏览器 -->
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="card-content">Sunset cityscape with spires, buildings, clouds, warm glow, and trees.</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="column">
+                        <div class="card">
+                            <div class="card-image">
+                                <!-- 保留视频元素，并确保它可以直接播放 -->
+                                <video loading="lazy" src="static/images/qihoo-t2v/1065485719.mp4" controls autoplay loop muted alt="sample1">
+                                    <!-- 提供一个替代文本，用于不支持视频的浏览器 -->
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="card-content">Woman back to camera in hat and purple dress among purple flowers.</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="column">
+                        <div class="card">
+                            <div class="card-image">
+                                <!-- 保留视频元素，并确保它可以直接播放 -->
+                                <video loading="lazy" src="static/images/qihoo-t2v/17974384.mp4" controls autoplay loop muted alt="sample1">
+                                    <!-- 提供一个替代文本，用于不支持视频的浏览器 -->
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="card-content">A school of fish is seen wandering in the deep sea, and below the video is a coral reef.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="hero is-small">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered has-text-centered"><h2 class="title is-3"> More cases of the Qihoo-T2MV.</h2></div>
+                <div class="columns is-centered has-text-centered">
+                    
+                    <div class="column">
+                        <div class="card">
+                            <div class="card-image">
+                                <!-- 保留视频元素，并确保它可以直接播放 -->
+                                <video loading="lazy" src="static/images/qihoo-t2mv/397209.mp4" controls autoplay loop muted alt="sample1">
+                                    <!-- 提供一个替代文本，用于不支持视频的浏览器 -->
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="card-content">Pixelated Minecraft sword with a yellow handle.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="card">
+                            <div class="card-image">
+                                <!-- 保留视频元素，并确保它可以直接播放 -->
+                                <video loading="lazy" src="static/images/qihoo-t2mv/10425.mp4" controls autoplay loop muted alt="sample1">
+                                    <!-- 提供一个替代文本，用于不支持视频的浏览器 -->
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="card-content">Low poly duck model with orange beak and green cap.</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="column">
+                        <div class="card">
+                            <div class="card-image">
+                                <!-- 保留视频元素，并确保它可以直接播放 -->
+                                <video loading="lazy" src="static/images/qihoo-t2mv/397707.mp4" controls autoplay loop muted alt="sample1">
+                                    <!-- 提供一个替代文本，用于不支持视频的浏览器 -->
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="card-content">Pixel art model of a robot-doll with red shoes.</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="column">
+                        <div class="card">
+                            <div class="card-image">
+                                <!-- 保留视频元素，并确保它可以直接播放 -->
+                                <video loading="lazy" src="static/images/qihoo-t2mv/418583.mp4" controls autoplay loop muted alt="sample1">
+                                    <!-- 提供一个替代文本，用于不支持视频的浏览器 -->
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="card-content"> A yellow toy fox character.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
             </div>
         </div>
