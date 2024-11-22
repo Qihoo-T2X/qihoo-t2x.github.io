@@ -53,7 +53,7 @@
             <div class="container is-max-desktop">
                 <div class="columns is-centered">
                     <div class="column has-text-centered">
-                        <h1 class="title is-1 publication-title" style="font-size:45px;"><br>Qihoo-T2X: An Efficient Proxy-Tokenizied Diffusion Transformer for Text-to-Any-Task</h1>
+                        <h1 class="title is-1 publication-title" style="font-size:45px;"><br>PT-T2I/V: An Efficient Proxy-Tokenizied Diffusion Transformer for Text-to-Image/Video-Task</h1>
                     </div>
                 </div>
             </div>
@@ -73,7 +73,7 @@
                             Specifically, within each transformer block, we compute an averaging token from each spatial-temporal window to serve as a proxy token for that region.
                             The global semantics are captured through the self-attention of these proxy tokens and then injected into all latent tokens via cross-attention. 
                             Simultaneously, we introduce window and shift window attention to address the limitations in detail modeling caused by the sparse attention mechanism.
-                            Building on the well-designed PT-DiT, we further develop the <strong>Qihoo-T2X</strong> family, which includes a variety of models for T2I, T2V, and T2MV tasks.
+                            Building on the well-designed PT-DiT, we further develop the <strong>PT-T2I/V</strong> family, which includes a variety of models for T2I, T2V, and T2MV tasks.
                             Experimental results show that PT-DiT achieves competitive performance while reducing the computational complexity in both image and video generation tasks (e.g., a 48% reduction compared to DiT and a 35% reduction compared to PixArt-<em>α</em>).
                         </p>
                     </div>
@@ -87,7 +87,7 @@
             <div class="hero-body">
                 <div class="container">
                     <div class="columns is-centered has-text-centered">
-                    <h2 class="title is-3">Qihoo-T2I / T2V / T2MV</h2>
+                    <h2 class="title is-3">PT-T2I / T2V / T2MV</h2>
                     </div>
                     <div id="results-carousel" class="carousel results-carousel">
                         <div class="card">
@@ -197,76 +197,8 @@
     <section class="hero is-small">
         <div class="hero-body">
             <div class="container is-max-desktop">
-                <div class="columns is-centered has-text-centered"><h2 class="title is-3"> More cases of the Qihoo-T2I</h2></div>
+                <div class="columns is-centered has-text-centered"><h2 class="title is-3"> More cases of the PT-T2I</h2></div>
                 
-                
-                <div class="columns is-centered has-text-centered">
-                    <div class="column">
-                        <div id="t2i-sample13" class="modal">
-                            <div class="modal-background"></div>
-                            <div class="modal-content">
-                                <img loading="lazy" src="static/images/qihoo-t2i-10242048/A small plant.png" />
-                            </div>
-                            <button class="modal-close is-large" aria-label="close"></button>
-                        </div>
-                        <div class="card">
-                            <div class="card-image js-modal-trigger" data-target="t2i-sample13">
-                                <img loading="lazy" src="static/images/qihoo-t2i-10242048/A small plant.png" alt="sample13" />
-                            </div>
-                            <div class="card-content">A small plant grows in the mud. The sun shines on it, providing warmth and light.</div>
-                        </div>
-                    </div>
-                
-                    <div class="column">
-                        <div id="t2i-sample14" class="modal">
-                            <div class="modal-background"></div>
-                            <div class="modal-content">
-                                <img loading="lazy" src="static/images/qihoo-t2i-10242048/A black and white.png" />
-                            </div>
-                            <button class="modal-close is-large" aria-label="close"></button>
-                        </div>
-                        <div class="card">
-                            <div class="card-image js-modal-trigger" data-target="t2i-sample14">
-                                <img loading="lazy" src="static/images/qihoo-t2i-10242048/A black and white.png" alt="sample14" />
-                            </div>
-                            <div class="card-content">A black and white drawing of a man with a beard, wearing a jacket, a sketchy style.</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="columns is-centered has-text-centered">
-                    <div class="column">
-                        <div id="t2i-sample15" class="modal">
-                            <div class="modal-background"></div>
-                            <div class="modal-content">
-                                <img loading="lazy" src="static/images/qihoo-t2i-10242048/Two pages in the.png" />
-                            </div>
-                            <button class="modal-close is-large" aria-label="close"></button>
-                        </div>
-                        <div class="card">
-                            <div class="card-image js-modal-trigger" data-target="t2i-sample15">
-                                <img loading="lazy" src="static/images/qihoo-t2i-10242048/Two pages in the.png" alt="sample15" />
-                            </div>
-                            <div class="card-content">Two pages in the book show a cityscape, with a large spaceship flying over a city.</div>
-                        </div>
-                    </div>
-                
-                    <div class="column">
-                        <div id="t2i-sample16" class="modal">
-                            <div class="modal-background"></div>
-                            <div class="modal-content">
-                                <img loading="lazy" src="static/images/qihoo-t2i-10242048/A cute owl.png" />
-                            </div>
-                            <button class="modal-close is-large" aria-label="close"></button>
-                        </div>
-                        <div class="card">
-                            <div class="card-image js-modal-trigger" data-target="t2i-sample16">
-                                <img loading="lazy" src="static/images/qihoo-t2i-10242048/A cute owl.png" alt="sample16" />
-                            </div>
-                            <div class="card-content">A cute owl sitting on a table surrounded by books, cups, spoons and bowls.</div>
-                        </div>
-                    </div>
-                </div>
                 <div class="columns is-centered has-text-centered">
                     <div class="column">
                         <div id="t2i-sample1" class="modal">
@@ -366,107 +298,6 @@
                         </div>
                     </div>
 
-                </div>
-                
-                <div class="columns is-centered has-text-centered">
-                    <div class="column">
-                        <div id="t2i-sample17" class="modal">
-                            <div class="modal-background"></div>
-                            <div class="modal-content">
-                                <img loading="lazy" src="static/images/qihoo-t2i-20481024/A large future.png" />
-                            </div>
-                            <button class="modal-close is-large" aria-label="close"></button>
-                        </div>
-                        <div class="card">
-                            <div class="card-image js-modal-trigger" data-target="t2i-sample17">
-                                <img loading="lazy" src="static/images/qihoo-t2i-20481024/A large future.png" alt="sample17" />
-                            </div>
-                            <div class="card-content">A large future residential building that combines green plants with architecture.</div>
-                        </div>
-                    </div>
-                
-                    <div class="column">
-                        <div id="t2i-sample18" class="modal">
-                            <div class="modal-background"></div>
-                            <div class="modal-content">
-                                <img loading="lazy" src="static/images/qihoo-t2i-20481024/a large.png" />
-                            </div>
-                            <button class="modal-close is-large" aria-label="close"></button>
-                        </div>
-                        <div class="card">
-                            <div class="card-image js-modal-trigger" data-target="t2i-sample18">
-                                <img loading="lazy" src="static/images/qihoo-t2i-20481024/a large.png" alt="sample18" />
-                            </div>
-                            <div class="card-content">A large, brightly colored spiral nebula, with a starry background.</div>
-                        </div>
-                    </div>
-
-                    <div class="column">
-                        <div id="t2i-sample19" class="modal">
-                            <div class="modal-background"></div>
-                            <div class="modal-content">
-                                <img loading="lazy" src="static/images/qihoo-t2i-20481024/A scene of a river.png" />
-                            </div>
-                            <button class="modal-close is-large" aria-label="close"></button>
-                        </div>
-                        <div class="card">
-                            <div class="card-image js-modal-trigger" data-target="t2i-sample19">
-                                <img loading="lazy" src="static/images/qihoo-t2i-20481024/A scene of a river.png" alt="sample19" />
-                            </div>
-                            <div class="card-content">A scene of a river flowing through a grassy field during a beautiful sunset. a watercolor style.</div>
-                        </div>
-                    </div>
-                </div>
-                
-
-                <div class="columns is-centered has-text-centered">
-                    <div class="column">
-                        <div id="t2i-sample20" class="modal">
-                            <div class="modal-background"></div>
-                            <div class="modal-content">
-                                <img loading="lazy" src="static/images/qihoo-t2i-20481024/A woman with.png" />
-                            </div>
-                            <button class="modal-close is-large" aria-label="close"></button>
-                        </div>
-                        <div class="card">
-                            <div class="card-image js-modal-trigger" data-target="t2i-sample20">
-                                <img loading="lazy" src="static/images/qihoo-t2i-20481024/A woman with.png" alt="sample20" />
-                            </div>
-                            <div class="card-content">A woman with red hair, wearing a white sweater. The background is blurry.</div>
-                        </div>
-                    </div>
-                
-                    <div class="column">
-                        <div id="t2i-sample21" class="modal">
-                            <div class="modal-background"></div>
-                            <div class="modal-content">
-                                <img loading="lazy" src="static/images/qihoo-t2i-20481024/An intricate flame.png" />
-                            </div>
-                            <button class="modal-close is-large" aria-label="close"></button>
-                        </div>
-                        <div class="card">
-                            <div class="card-image js-modal-trigger" data-target="t2i-sample21">
-                                <img loading="lazy" src="static/images/qihoo-t2i-20481024/An intricate flame.png" alt="sample21" />
-                            </div>
-                            <div class="card-content">An intricate flame-shaped ornament.</div>
-                        </div>
-                    </div>
-
-                    <div class="column">
-                        <div id="t2i-sample22" class="modal">
-                            <div class="modal-background"></div>
-                            <div class="modal-content">
-                                <img loading="lazy" src="static/images/qihoo-t2i-20481024/Close up of.png" />
-                            </div>
-                            <button class="modal-close is-large" aria-label="close"></button>
-                        </div>
-                        <div class="card">
-                            <div class="card-image js-modal-trigger" data-target="t2i-sample22">
-                                <img loading="lazy" src="static/images/qihoo-t2i-20481024/Close up of.png" alt="sample22" />
-                            </div>
-                            <div class="card-content">Close up of a fox with orange and white fur.</div>
-                        </div>
-                    </div>
                 </div>
 
                 <div class="columns is-centered has-text-centered">
@@ -579,7 +410,7 @@
     <section class="hero is-small">
         <div class="hero-body">
             <div class="container is-max-desktop">
-                <div class="columns is-centered has-text-centered"><h2 class="title is-3"> More cases of the Qihoo-T2V</h2></div>
+                <div class="columns is-centered has-text-centered"><h2 class="title is-3"> More cases of the PT-T2V</h2></div>
                 
                 <div class="columns is-centered has-text-centered">
                     
@@ -670,7 +501,7 @@
     <section class="hero is-small">
         <div class="hero-body">
             <div class="container is-max-desktop">
-                <div class="columns is-centered has-text-centered"><h2 class="title is-3"> More cases of the Qihoo-T2MV</h2></div>
+                <div class="columns is-centered has-text-centered"><h2 class="title is-3"> More cases of the PT-T2MV</h2></div>
                 <div class="columns is-centered has-text-centered">
                     
                     <div class="column">
@@ -728,6 +559,317 @@
             </div>
         </div>
     </section>
+
+    <section class="hero is-small">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered has-text-centered"><h2 class="title is-3"> Cases of the VideoMV</h2></div>
+                <div class="columns is-centered has-text-centered">
+                    
+                    <div class="column">
+                        <div class="card">
+                            <div class="card-image">
+                                <!-- 保留视频元素，并确保它可以直接播放 -->
+                                <video loading="lazy" src="static/images/videomv/handle.mp4" controls autoplay loop muted alt="sample1">
+                                    <!-- 提供一个替代文本，用于不支持视频的浏览器 -->
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="card-content">Pixelated Minecraft sword with a yellow handle.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="card">
+                            <div class="card-image">
+                                <!-- 保留视频元素，并确保它可以直接播放 -->
+                                <video loading="lazy" src="static/images/videomv/duck.mp4" controls autoplay loop muted alt="sample1">
+                                    <!-- 提供一个替代文本，用于不支持视频的浏览器 -->
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="card-content">Low poly duck model with orange beak and green cap.</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="column">
+                        <div class="card">
+                            <div class="card-image">
+                                <!-- 保留视频元素，并确保它可以直接播放 -->
+                                <video loading="lazy" src="static/images/videomv/robot-doll.mp4" controls autoplay loop muted alt="sample1">
+                                    <!-- 提供一个替代文本，用于不支持视频的浏览器 -->
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="card-content">Pixel art model of a robot-doll with red shoes.</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="column">
+                        <div class="card">
+                            <div class="card-image">
+                                <!-- 保留视频元素，并确保它可以直接播放 -->
+                                <video loading="lazy" src="static/images/videomv/fox.mp4" controls autoplay loop muted alt="sample1">
+                                    <!-- 提供一个替代文本，用于不支持视频的浏览器 -->
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="card-content"> A yellow toy fox character.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="hero is-small">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered has-text-centered"><h2 class="title is-3"> PT-T2I results at 1024*2048 resolution</h2></div>
+
+                <div class="columns is-centered has-text-centered">
+                    <div class="column">
+                        <div id="t2i-sample13" class="modal">
+                            <div class="modal-background"></div>
+                            <div class="modal-content">
+                                <img loading="lazy" src="static/images/qihoo-t2i-10242048/A small plant.png" />
+                            </div>
+                            <button class="modal-close is-large" aria-label="close"></button>
+                        </div>
+                        <div class="card">
+                            <div class="card-image js-modal-trigger" data-target="t2i-sample13">
+                                <img loading="lazy" src="static/images/qihoo-t2i-10242048/A small plant.png" alt="sample13" />
+                            </div>
+                            <div class="card-content">A small plant grows in the mud. The sun shines on it, providing warmth and light.</div>
+                        </div>
+                    </div>
+                
+                    <div class="column">
+                        <div id="t2i-sample14" class="modal">
+                            <div class="modal-background"></div>
+                            <div class="modal-content">
+                                <img loading="lazy" src="static/images/qihoo-t2i-10242048/A black and white.png" />
+                            </div>
+                            <button class="modal-close is-large" aria-label="close"></button>
+                        </div>
+                        <div class="card">
+                            <div class="card-image js-modal-trigger" data-target="t2i-sample14">
+                                <img loading="lazy" src="static/images/qihoo-t2i-10242048/A black and white.png" alt="sample14" />
+                            </div>
+                            <div class="card-content">A black and white drawing of a man with a beard, wearing a jacket, a sketchy style.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="columns is-centered has-text-centered">
+                    <div class="column">
+                        <div id="t2i-sample15" class="modal">
+                            <div class="modal-background"></div>
+                            <div class="modal-content">
+                                <img loading="lazy" src="static/images/qihoo-t2i-10242048/Two pages in the.png" />
+                            </div>
+                            <button class="modal-close is-large" aria-label="close"></button>
+                        </div>
+                        <div class="card">
+                            <div class="card-image js-modal-trigger" data-target="t2i-sample15">
+                                <img loading="lazy" src="static/images/qihoo-t2i-10242048/Two pages in the.png" alt="sample15" />
+                            </div>
+                            <div class="card-content">Two pages in the book show a cityscape, with a large spaceship flying over a city.</div>
+                        </div>
+                    </div>
+                
+                    <div class="column">
+                        <div id="t2i-sample16" class="modal">
+                            <div class="modal-background"></div>
+                            <div class="modal-content">
+                                <img loading="lazy" src="static/images/qihoo-t2i-10242048/A cute owl.png" />
+                            </div>
+                            <button class="modal-close is-large" aria-label="close"></button>
+                        </div>
+                        <div class="card">
+                            <div class="card-image js-modal-trigger" data-target="t2i-sample16">
+                                <img loading="lazy" src="static/images/qihoo-t2i-10242048/A cute owl.png" alt="sample16" />
+                            </div>
+                            <div class="card-content">A cute owl sitting on a table surrounded by books, cups, spoons and bowls.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="columns is-centered has-text-centered"><h2 class="title is-3"> PT-T2I results at 1792*1792 resolution</h2></div>
+
+                <div class="columns is-centered has-text-centered">
+                    <div class="column">
+                        <div id="t2i-sample13" class="modal">
+                            <div class="modal-background"></div>
+                            <div class="modal-content">
+                                <img loading="lazy" src="static/images/qihoo-t2i-17921792/1.png" />
+                            </div>
+                            <button class="modal-close is-large" aria-label="close"></button>
+                        </div>
+                        <div class="card">
+                            <div class="card-image js-modal-trigger" data-target="t2i-sample13">
+                                <img loading="lazy" src="static/images/qihoo-t2i-17921792/1.png" alt="sample13" />
+                            </div>
+                            <div class="card-content">One serving of easy sesame noodles in a bowl with sliced green onions.</div>
+                        </div>
+                    </div>
+                
+                    <div class="column">
+                        <div id="t2i-sample14" class="modal">
+                            <div class="modal-background"></div>
+                            <div class="modal-content">
+                                <img loading="lazy" src="static/images/qihoo-t2i-17921792/232.png" />
+                            </div>
+                            <button class="modal-close is-large" aria-label="close"></button>
+                        </div>
+                        <div class="card">
+                            <div class="card-image js-modal-trigger" data-target="t2i-sample14">
+                                <img loading="lazy" src="static/images/qihoo-t2i-17921792/232.png" alt="sample14" />
+                            </div>
+                            <div class="card-content">Close up of harissa BBQ chicken on a platter with fries, sumac onions, and naan bread.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="columns is-centered has-text-centered">
+                    <div class="column">
+                        <div id="t2i-sample15" class="modal">
+                            <div class="modal-background"></div>
+                            <div class="modal-content">
+                                <img loading="lazy" src="static/images/qihoo-t2i-17921792/267.png" />
+                            </div>
+                            <button class="modal-close is-large" aria-label="close"></button>
+                        </div>
+                        <div class="card">
+                            <div class="card-image js-modal-trigger" data-target="t2i-sample15">
+                                <img loading="lazy" src="static/images/qihoo-t2i-17921792/267.png" alt="sample15" />
+                            </div>
+                            <div class="card-content">Older people smiling for the camera.</div>
+                        </div>
+                    </div>
+                
+                    <div class="column">
+                        <div id="t2i-sample16" class="modal">
+                            <div class="modal-background"></div>
+                            <div class="modal-content">
+                                <img loading="lazy" src="static/images/qihoo-t2i-17921792/a6770c9ad73216505408cc6636d7b60c.png" />
+                            </div>
+                            <button class="modal-close is-large" aria-label="close"></button>
+                        </div>
+                        <div class="card">
+                            <div class="card-image js-modal-trigger" data-target="t2i-sample16">
+                                <img loading="lazy" src="static/images/qihoo-t2i-17921792/a6770c9ad73216505408cc6636d7b60c.png" alt="sample16" />
+                            </div>
+                            <div class="card-content">A man stands in front of the camera, looking into the distance with a thoughtful expression, his gaze focused as if lost in deep reflection.</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="columns is-centered has-text-centered"><h2 class="title is-3"> PT-T2I results at 2048*1024 resolution</h2></div>
+                
+                <div class="columns is-centered has-text-centered">
+                    <div class="column">
+                        <div id="t2i-sample17" class="modal">
+                            <div class="modal-background"></div>
+                            <div class="modal-content">
+                                <img loading="lazy" src="static/images/qihoo-t2i-20481024/A large future.png" />
+                            </div>
+                            <button class="modal-close is-large" aria-label="close"></button>
+                        </div>
+                        <div class="card">
+                            <div class="card-image js-modal-trigger" data-target="t2i-sample17">
+                                <img loading="lazy" src="static/images/qihoo-t2i-20481024/A large future.png" alt="sample17" />
+                            </div>
+                            <div class="card-content">A large future residential building that combines green plants with architecture.</div>
+                        </div>
+                    </div>
+                
+                    <div class="column">
+                        <div id="t2i-sample18" class="modal">
+                            <div class="modal-background"></div>
+                            <div class="modal-content">
+                                <img loading="lazy" src="static/images/qihoo-t2i-20481024/a large.png" />
+                            </div>
+                            <button class="modal-close is-large" aria-label="close"></button>
+                        </div>
+                        <div class="card">
+                            <div class="card-image js-modal-trigger" data-target="t2i-sample18">
+                                <img loading="lazy" src="static/images/qihoo-t2i-20481024/a large.png" alt="sample18" />
+                            </div>
+                            <div class="card-content">A large, brightly colored spiral nebula, with a starry background.</div>
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <div id="t2i-sample19" class="modal">
+                            <div class="modal-background"></div>
+                            <div class="modal-content">
+                                <img loading="lazy" src="static/images/qihoo-t2i-20481024/A scene of a river.png" />
+                            </div>
+                            <button class="modal-close is-large" aria-label="close"></button>
+                        </div>
+                        <div class="card">
+                            <div class="card-image js-modal-trigger" data-target="t2i-sample19">
+                                <img loading="lazy" src="static/images/qihoo-t2i-20481024/A scene of a river.png" alt="sample19" />
+                            </div>
+                            <div class="card-content">A scene of a river flowing through a grassy field during a beautiful sunset. a watercolor style.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="columns is-centered has-text-centered">
+                    <div class="column">
+                        <div id="t2i-sample20" class="modal">
+                            <div class="modal-background"></div>
+                            <div class="modal-content">
+                                <img loading="lazy" src="static/images/qihoo-t2i-20481024/A woman with.png" />
+                            </div>
+                            <button class="modal-close is-large" aria-label="close"></button>
+                        </div>
+                        <div class="card">
+                            <div class="card-image js-modal-trigger" data-target="t2i-sample20">
+                                <img loading="lazy" src="static/images/qihoo-t2i-20481024/A woman with.png" alt="sample20" />
+                            </div>
+                            <div class="card-content">A woman with red hair, wearing a white sweater. The background is blurry.</div>
+                        </div>
+                    </div>
+                
+                    <div class="column">
+                        <div id="t2i-sample21" class="modal">
+                            <div class="modal-background"></div>
+                            <div class="modal-content">
+                                <img loading="lazy" src="static/images/qihoo-t2i-20481024/An intricate flame.png" />
+                            </div>
+                            <button class="modal-close is-large" aria-label="close"></button>
+                        </div>
+                        <div class="card">
+                            <div class="card-image js-modal-trigger" data-target="t2i-sample21">
+                                <img loading="lazy" src="static/images/qihoo-t2i-20481024/An intricate flame.png" alt="sample21" />
+                            </div>
+                            <div class="card-content">An intricate flame-shaped ornament.</div>
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <div id="t2i-sample22" class="modal">
+                            <div class="modal-background"></div>
+                            <div class="modal-content">
+                                <img loading="lazy" src="static/images/qihoo-t2i-20481024/Close up of.png" />
+                            </div>
+                            <button class="modal-close is-large" aria-label="close"></button>
+                        </div>
+                        <div class="card">
+                            <div class="card-image js-modal-trigger" data-target="t2i-sample22">
+                                <img loading="lazy" src="static/images/qihoo-t2i-20481024/Close up of.png" alt="sample22" />
+                            </div>
+                            <div class="card-content">Close up of a fox with orange and white fur.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- <section class="hero is-small">
         <div class="hero-body">
             <div class="container is-max-desktop">
